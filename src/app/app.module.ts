@@ -9,6 +9,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { CameraComponent } from './camera/camera.component';
 import { GeolocationComponent } from './geolocation/geolocation.component';
 import { CodebarComponent } from './codebar/codebar.component';
+import { ROUTES } from './app.router';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CodebarComponent } from './codebar/codebar.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    ROUTES
   ],
   providers: [],
   bootstrap: [AppComponent]

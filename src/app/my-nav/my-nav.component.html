@@ -7,11 +7,13 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
     <mat-toolbar color="primary">Menu</mat-toolbar>
+
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="['/camera']">Camera</a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="['/geolocation']">Geolocation</a>
+      <a mat-list-item (click)="drawer.toggle()" [routerLink]="['/codebar']">Codebar</a>
     </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
@@ -25,6 +27,6 @@
       </button>
       <span>HellowCordova</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
